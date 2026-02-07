@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* @plugin "tailwindcss-animate"; removed because not installed */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Quicksand", sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+}
+
+:root {
+  --radius: 1rem;
+  
+  /* Soft Pastel Pink Theme */
+  --background: #FFF0F5; /* LavenderBlush */
+  --foreground: #5C2B2B; /* Dark Rose Brown */
+  
+  --card: #FFFFFF;
+  --card-foreground: #5C2B2B;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #5C2B2B;
+  
+  --primary: #FFB6C1; /* LightPink */
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #FFE4E1; /* MistyRose */
+  --secondary-foreground: #5C2B2B;
+  
+  --muted: #FFF5EE; /* Seashell */
+  --muted-foreground: #A0522D; /* Sienna */
+  
+  --accent: #FFC0CB; /* Pink */
+  --accent-foreground: #5C2B2B;
+  
+  --destructive: #FF6B6B;
+  --destructive-foreground: #FFFFFF;
+  
+  --border: #FCD5CE; /* Rose Goldish */
+  --input: #FAE1DD;
+  --ring: #FFB6C1;
+  
+  --chart-1: #FFB6C1;
+  --chart-2: #FF69B4;
+  --chart-3: #FF1493;
+  --chart-4: #DB7093;
+  --chart-5: #C71585;
+}
+
+.dark {
+  /* Dark mode not primary focus but keeping valid colors */
+  --background: #2C1818;
+  --foreground: #FFE4E1;
+  --card: #3D2323;
+  --card-foreground: #FFE4E1;
+  --popover: #3D2323;
+  --popover-foreground: #FFE4E1;
+  --primary: #FFB6C1;
+  --primary-foreground: #2C1818;
+  --secondary: #4A2F2F;
+  --secondary-foreground: #FFE4E1;
+  --muted: #3D2323;
+  --muted-foreground: #D8BFD8;
+  --accent: #4A2F2F;
+  --accent-foreground: #FFE4E1;
+  --destructive: #990000;
+  --destructive-foreground: #FFE4E1;
+  --border: #5C3A3A;
+  --input: #5C3A3A;
+  --ring: #FFB6C1;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans selection:bg-primary/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
