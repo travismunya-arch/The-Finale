@@ -18,7 +18,6 @@ import PaperOverlay from "@/components/PaperOverlay";
 import { Reveal } from "@/components/Reveal";
 
 // Assets
-import doodleSwirls from "@/assets/doodle_swirls.png";
 import doodleLeaves from "@/assets/doodle_leaves.png";
 import flowerPetal from "@/assets/flower_petal.png";
 import bgMusic from "@/assets/background_music.mp3";
@@ -102,7 +101,6 @@ export default function Home() {
       {/* Global Background Decorations */}
       {(view === "main" || view === "interlude" || view === "gifts") && !isDarkRoom && (
           <div className="fixed inset-0 pointer-events-none z-0">
-             <img src={doodleSwirls} className="absolute -top-20 -left-20 w-64 h-64 opacity-20 rotate-12 mix-blend-multiply" alt="" />
              <img src={doodleLeaves} className="absolute top-10 -right-10 w-48 h-48 opacity-20 -rotate-12 mix-blend-multiply" alt="" />
              <img src={flowerPetal} className="absolute top-1/4 left-10 w-8 h-8 opacity-40 animate-float blur-[1px]" style={{ animationDuration: "8s" }} alt="" />
              <img src={flowerPetal} className="absolute top-1/3 right-20 w-6 h-6 opacity-30 animate-float blur-[1px]" style={{ animationDuration: "12s", animationDelay: "2s" }} alt="" />

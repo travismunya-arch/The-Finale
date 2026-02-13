@@ -6,9 +6,9 @@ import { Gift, Music, Heart, ArrowLeft, Download, Loader2, Play, Pause } from "l
 // Assets
 import bouquetImg from "@/assets/bouquet.png";
 import petalsImg from "@/assets/falling_petals.png";
-import roseHeadImg from "@/assets/falling_roses.png";
+import roseHeadImg from "@/assets/flower_petal.png";
 import weddingBg from "@/assets/wedding_aisle_refined.jpg";
-import audioFile from "@/assets/background_music.mp3"; 
+import audioFile from "@/assets/background_music.mp3";
 import chimeSfx from "@/assets/chime.mp3";
 
 interface GiftsProps {
